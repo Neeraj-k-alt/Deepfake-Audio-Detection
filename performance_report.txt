@@ -1,0 +1,29 @@
+
+╔══════════════════════════════════════════════════════╗
+║     DEEPFAKE AUDIO DETECTION — PERFORMANCE REPORT   ║
+╚══════════════════════════════════════════════════════╝
+
+  Model          : Random Forest
+  Feature dims   : 274
+  Training files : 870
+  Validation     : 218
+  Device         : CUDA (Tesla T4)
+
+─── Primary Metrics ──────────────────────────────────
+  Overall Accuracy  : 100.00%    ✅ PASS  (target ≥ 80%)
+  Equal Error Rate  : 0.00%    ✅ PASS  (target ≤ 12%)
+
+─── Secondary Metrics ────────────────────────────────
+  Macro F1 Score    : 100.00%    ✅ PASS  (target ≥ 80%)
+  ROC AUC           : 1.0000
+  Genuine  Accuracy : 100.00%    ✅ PASS  (target ≥ 75%)
+  Deepfake Accuracy : 100.00%    ✅ PASS  (target ≥ 75%)
+
+─── Cross-Validation ─────────────────────────────────
+  5-Fold Mean Acc   : 100.00% ± 0.00%
+
+─── Confusion Matrix ─────────────────────────────────
+                  Predicted
+                  Genuine   Deepfake
+  True Genuine  :    109         0
+       Deepfake :      0       109
